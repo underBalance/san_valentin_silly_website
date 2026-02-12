@@ -3,9 +3,9 @@
 // Texts to rotate in the speech bubble.
 const messages = [
   "Alguien me ha pedido que te entregue unas flores",
-  "Ya que me ha dicho que le preocupaba que nadie te diera flores este dia.",
-  "Y nada eso, si alguien te da unas reales mejor que mejor.",
-  "Pero sino yo como mensajero te entrego estas."
+  "ya que me ha dicho que le preocupaba que nadie te diera flores este dia.",
+  "Y nada eso, si alguien te da unas reales mejor que mejor,",
+  "pero sino yo te entrego estas."
 ];
 
 const bubble = document.querySelector(".bubble");
