@@ -1,0 +1,125 @@
+:root {
+  --bg-start: #fff1f5;
+  --bg-mid: #ffd6e0;
+  --bg-end: #fff7fb;
+  --accent: hwb(150 23% 0%);
+  --accent-dark: #2e70d9;
+  --text: #2b1b22;
+  --bubble: #ffffff;
+  --bubble-border: #93ffb7;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 20%, var(--bg-end), transparent 45%),
+              radial-gradient(circle at 80% 0%, var(--bg-mid), transparent 35%),
+              linear-gradient(135deg, var(--bg-start), var(--bg-mid));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.scene {
+  width: min(92vw, 420px);
+  text-align: center;
+  position: relative;
+  padding: 20px 12px 40px;
+}
+
+.title {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(20px, 5vw, 30px);
+  margin: 0 0 12px;
+  color: var(--accent-dark);
+  letter-spacing: 0.5px;
+}
+
+.cat-wrap {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.cat {
+  width: min(78vw, 320px);
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.15));
+  transform-origin: center bottom;
+}
+
+.roses {
+  position: absolute;
+  width: min(70vw, 160px);
+  bottom: -6px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.6);
+  pointer-events: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  transform: translateY(20px) scale(0.85);
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.bubble {
+  max-width: 90%;
+  background: var(--bubble);
+  border: 2px solid var(--bubble-border);
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: clamp(14px, 4vw, 18px);
+  box-shadow: var(--shadow);
+  position: relative;
+  margin: 0 auto 12px;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: var(--bubble);
+  border-right: 2px solid var(--bubble-border);
+  border-bottom: 2px solid var(--bubble-border);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  font-size: clamp(12px, 3.2vw, 14px);
+  opacity: 0.7;
+}
+
+.final-glow {
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle, rgba(255, 59, 123, 0.35), transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 420px) {
+  .scene {
+    padding: 10px 6px 32px;
+  }
+}

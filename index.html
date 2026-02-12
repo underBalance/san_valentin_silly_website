@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gato Interactivo de San Valentin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <h1 class="title">Gato Copón</h1>
+
+      <div class="bubble" aria-live="polite">Hola, me llamo Copón.</div>
+
+      <div class="cat-wrap">
+        <img class="cat" src="assets/cat.jpg" alt="Gato enamorado" />
+        <img class="roses" src="assets/ramaco_flores.webp" alt="Ramo de rosas" />
+      </div>
+
+      <p class="subtitle">Toca la pantalla cuando hayas leído todo el texto.</p>
+
+      <div class="final-glow" aria-hidden="true"></div>
+
+
+      <!-- TEXTO INFERIOR -->
+      <p class="bottom-text">
+        Disclaimer: Esta animación se ha hecho con el único propósito de mandarte 
+        flores y que te rías un poco. Bueno.... Tengo que reconocer que esta tecnología 
+        la quiero entender y tengo que hacer pruebecitas.
+      </p>
+
+      <div class="final-glow" aria-hidden="true"></div>
+    </main>
+
+    <!-- GSAP for smooth animation -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
